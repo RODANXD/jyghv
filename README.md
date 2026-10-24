@@ -56,6 +56,6 @@ the `CMD` defined there and listens on Heroku's `$PORT`.
 
 ### Deploy from GitHub
 
-Create a Heroku app using the `container` stack, connect it to
-`RODANXD/jyghv` in the app's **Deploy** tab, and deploy the `main` branch. Enable
-automatic deploys there if you want future pushes to `main` to publish automatically.
+Create a Heroku app using the `container` stack, connect it to this repository in
+the app's **Deploy** tab, and deploy the `main` branch. Enable automatic deploys
+there if you want future pushes to `main` to publish automatically.
