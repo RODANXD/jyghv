@@ -1,0 +1,36 @@
+:root { --ink:#14232E; --paper:#F2F5F6; --line:#D5DDE1; --muted:#5B6B76; --accent:#2F5BEA; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.5 "Instrument Sans", system-ui, sans-serif; }
+h1,h2,h3 { font-family:"Bricolage Grotesque", "Instrument Sans", sans-serif; margin:0; }
+.shell { display:grid; grid-template-columns:260px 1fr; min-height:100vh; }
+.rail { padding:32px 24px; border-right:1px solid var(--line); position:sticky; top:0; height:100vh; display:flex; flex-direction:column; gap:20px; background:#fff; }
+.rail h1 { font-size:28px; }
+.rail-sub { margin:0; color:var(--muted); }
+.rail label { display:flex; flex-direction:column; gap:6px; font-weight:500; font-size:14px; }
+input { font:inherit; padding:8px 10px; border:1px solid var(--line); border-radius:4px; background:var(--paper); color:var(--ink); }
+input:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
+.rail-help { font-size:13px; color:var(--muted); margin:0; }
+main { padding:40px 48px 64px; max-width:1180px; width:100%; }
+.lede h2 { font-size:30px; line-height:1.2; max-width:26em; font-weight:600; }
+.lede p { color:var(--muted); max-width:44em; margin:12px 0 32px; }
+.section-title { font-size:22px; margin:48px 0 16px; }
+.panel { padding:20px 0; border-top:1px solid var(--line); }
+.panel h3 { font-size:18px; }
+.note { margin:2px 0 12px; color:var(--muted); font-size:14px; }
+.chart-box { width:100%; }
+.figures { display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin:8px 0; }
+.figure { padding:16px 16px 16px 0; }
+.figure + .figure { padding-left:16px; border-left:1px solid var(--line); }
+.figure-value { font:700 24px "Bricolage Grotesque", sans-serif; font-variant-numeric:tabular-nums; }
+.figure-label { font-weight:500; }
+.figure-hint { font-size:13px; color:var(--muted); }
+.grid { display:grid; grid-template-columns:1fr 1fr; gap:0 40px; }
+.error { color:#B3261E; }
+footer { margin-top:40px; color:var(--muted); font-size:13px; }
+@media (max-width:900px) {
+  .shell { grid-template-columns:1fr; }
+  .rail { position:static; height:auto; border-right:0; border-bottom:1px solid var(--line); }
+  main { padding:24px 16px 48px; } .grid { grid-template-columns:1fr; }
+  .lede h2 { font-size:24px; }
+}
+@media (prefers-reduced-motion:reduce) { * { transition:none !important; animation:none !important; } }
